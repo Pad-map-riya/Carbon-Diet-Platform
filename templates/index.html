@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Diet Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>🌱 Carbon Diet Platform</h1>
+        <p>Track eco-friendly actions and climb the leaderboard!</p>
+    </header>
+
+    <main>
+        <!-- Action Logging -->
+        <section id="log-action" class="card">
+            <h2>Log Your Action</h2>
+            <form id="actionForm">
+                <label for="action">Select Action:</label>
+                <select id="action" name="action" required>
+                    <option value="">-- Choose --</option>
+                    <option value="cycle">🚴 Cycled to work (+20 points)</option>
+                    <option value="recycle">♻️ Recycled waste (+10 points)</option>
+                    <option value="plant">🌳 Planted a tree (+50 points)</option>
+                    <option value="reuse">🛍️ Used reusable bag (+5 points)</option>
+                </select>
+                <button type="submit">Submit Action</button>
+            </form>
+        </section>
+
+        <!-- Leaderboard -->
+        <section id="leaderboard" class="card">
+            <h2>🏆 Leaderboard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboardBody">
+                    <!-- Dynamic content loaded here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Carbon Diet Platform - Making the world greener, one action at a time! 🌍</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
